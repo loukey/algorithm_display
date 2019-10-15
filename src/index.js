@@ -1,30 +1,54 @@
-/**
- * Created by za on 2019/10/2.
- */
+import React from 'react';
 import ReactDOM from 'react-dom'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+import Home from "./router/home/home";
+import Register from "./router/register/register";
+import Record from "./router/record/record";
 
-'use strict';
+export default function Navigator() {
+    return (
+        <Router>
+            <div>
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/Register">Register</Link>
+                        </li>
+                        <li>
+                            <Link to="/Record">Record</Link>
+                        </li>
+                    </ul>
+                </nav>
 
-const e = React.createElement;
-
-class LikeButton extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {liked: false}
-    }
-    render() {
-        if (this.state.liked) {
-            return 'You liked this.';
-        }
-
-        return e(
-            'button',
-            {onClick: () => this.setState({liked: true})},
-            'Like'
-        );
-    }
+                {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+                <Switch>
+                    <Route path="/Register">
+                        <Register />
+                    </Route>
+                    <Route path="/Record">
+                        <Record />
+                    </Route>
+                    <Route path="/">
+                        <Home />
+                    </Route>
+                </Switch>
+            </div>
+        </Router>
+    );
 }
 
+const nav = Navigator()
 
-const domContainer = document.querySelector('#like_button_container');
-ReactDOM.render(e(LikeButton), domContainer)
+ReactDOM.render(
+    nav,
+    document.getElementById('root')
+)
