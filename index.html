@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <script type="text/javascript" src="third_parts/jsmpeg.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <script type="text/javascript" src="src/rtsp/client.js"></script>
+    <script type="text/javascript" src="src/websocket/websocketClient.js"></script>
+    <script type="text/javascript" src="src/public/index.js"></script>
+    <script src="src/public/add_vector.js"></script>
+</head>
+<body>
+    <div>
+
+    </div>
+    <div>
+        <div id="video" class="main-display">
+            <div class="middle-display">
+                <div id="video-display" class="middle-display">
+                    <canvas id="video-canvas"></canvas>
+                </div>
+                <div id="video-button">
+                    <button onclick="connect()">Connect</button>
+                    <button onclick="rtsp_request()">Preview</button>
+                </div>
+            </div>
+            <div id="video-form">
+                <form class="camera-form">
+                    <p>Camera Url: <input id="camera-url" type="text" value="input the camera ip:port" size="45"></p>
+                    <input type="button" value="Camera Register" onclick="add_option()"/>
+                    <input type="button" value="Delete Camera" onclick="delete_option()"/>
+                </form>
+            </div>
+            <div id="video-select">
+                <select id="camera-select">
+                    <option>Choose the camera and click connect followed preview to show</option>
+                </select>
+            </div>
+            <div id="video-log">
+                <textarea rows="10" cols="60">
+                    Camera Log
+                </textarea>
+            </div>
+        </div>
+        <div id="predict" class="main-display">
+            <div class="middle-display">
+                <div id="predict-display">
+                    <img src="img/predict_result/111.jpeg" width="320px" height="180px" class="middle-display">
+                </div>
+            </div>
+            <div class="middle-display">
+                <div class="text-center">
+                    <label><input name="predict-type" type="radio">Face Recoginition</label>
+                    <label><input name="predict-type" type="radio">Person Re-identification</label>
+                </div>
+            </div>
+            <div class="middle-display">
+                <div id="predict-button">
+                    <input type="button" value="Predict">
+                </div>
+            </div>
+            <div class="middle-display">
+                <div id="predict-log">
+                    <textarea rows="10" cols="60" class="text-display">
+                        Predict Log
+                    </textarea>
+                </div>
+            </div>
+        </div>
+        <div id="add-vector" class="main-display">
+            <div>
+                <img src="img/upload_img/111.jpeg" width="300px" height="300px" id="image-display">
+            </div>
+            <div>
+                <input id="file-upload" type="file" accept="image/jpeg, image/png, image/jpg">
+            </div>
+            <div>
+                <p>The Label: <input type="text" size="43" id="id-upload"></p>
+            </div>
+            <div>
+                <input type="button" value="Submit"/>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
