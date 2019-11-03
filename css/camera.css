@@ -1,0 +1,50 @@
+.camera_config_title_div{
+    margin-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    font-family: SimSun;
+    font-size: 35px;
+    border-bottom: 1px solid black;
+}
+.camera_list_title_table{
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    font-family: SimSun;
+    font-size: 25px;
+}
+.camera_list_div{
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    overflow-y: auto;
+    height: 200px;
+    padding: 0;
+    border: none;
+}
+.camera_list_table{
+    width: 100%;
+    font-family: SimSun;
+    font-size: 25px;
+    border-top: none;
+}
+#camera_form{
+    position: relative;
+    margin: 0 auto;
+    width: 60%; 
+}
+#camera_form p{
+    display: inline;
+    padding-top: 10px;
+}
+#camera_info{
+    width: 100%;
+}
+#user_info{
+    width: 100%;
+    margin-top: 10px;
+}
+#camera_form_submit{
+    margin-top: 10px;    
+    margin-left: 10px;
+}

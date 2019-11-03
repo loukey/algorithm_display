@@ -1,0 +1,8 @@
+img
+images
+demo_pages
+*.avi
+upload_img
+*.png
+*.jpg
+node_modules

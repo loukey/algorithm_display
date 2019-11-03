@@ -1,0 +1,85 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    padding:0;
+    margin: 0;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    /* background-color: black; */
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-modify: none;
+}
+.header_table{
+    margin: 0 auto;
+    height: 60px;
+    width: 80%;
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+    background-color: aquamarine;
+    border: 1px solid black;
+    border-bottom: none;
+    box-sizing: border-box;
+    
+}
+.header_div{
+    height: 100%;
+    width: 100%;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    /* background-color: aquamarine; */
+    font-family: SimSun;
+    font-size: 30px;
+}
+.main_div{
+    margin: 0 auto;
+    width: 80%;
+    height: 1000px;
+    display: table;
+}
+.left_div{
+    width: 10%;
+    border: 1px solid black;
+    background-color: aquamarine;
+    display: table-cell;
+    height: 100px;
+}
+.nav_div{
+    /*width: 100%;*/
+    /* border-top:1px solid black;
+    border-bottom:1px solid black; */
+}
+.nav_div tr{
+    width: 100%;
+    vertical-align: middle;
+    
+}
+.nav_div tr td {
+    width: 100%;
+    vertical-align: middle;
+    padding: 0;
+    border: 1px solid black;    
+}
+.nav_box{
+    width: 100%;
+    font-family: SimSun;
+    font-size: 25px;
+}
+.nav_box a{
+    text-decoration: none;
+    color: black;
+}
+.right_div{
+    width: 90%;
+    border: 1px solid black;
+    border-left: 0;
+    height: 800px;
+    display: table-cell;
+    /* vertical-align: middle; */
+}
